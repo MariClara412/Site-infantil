@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Por que temos que cuidar do nosso Corpo?</title>
+  <link rel="stylesheet" href="StyleSite.css">
+</head>
+<body id="body-cuidados-corpo">
+
+  <div class="container" id="content-cuidados-corpo">
+    <!-- Introdução -->
+    <section id="intro-cuidados-corpo">
+      <h1>Por que temos que cuidar do nosso Corpo?</h1>
+      <p>Olá, turma! Hoje vamos aprender sobre o nosso corpo e como cuidar dele para sermos saudáveis e felizes. Vamos lá?</p>
+    </section>
+
+    <!-- Partes do Corpo -->
+    <section id="partes-corpo">
+      <h2>Partes do Corpo Humano</h2>
+
+      <div class="parte-corpo" id="cabeca">
+        <h3>Cabeça</h3>
+        <ul>
+          <li><strong>Olhos:</strong> usamos para ver o mundo ao nosso redor.</li>
+          <li><strong>Nariz:</strong> usamos para sentir cheiros.</li>
+          <li><strong>Boca:</strong> usamos para falar e comer.</li>
+          <li><strong>Ouvidos:</strong> usamos para ouvir sons.</li>
+        </ul>
+        <img src="Fotos/cabeça.jpg" alt="Cabeça" class="parte-imagem">
+      </div>
+
+      <div class="parte-corpo" id="tronco">
+        <h3>Tronco</h3>
+        <ul>
+          <li><strong>Coração:</strong> bombeia sangue para todo o corpo.</li>
+          <li><strong>Pulmões:</strong> usamos para respirar.</li>
+        </ul>
+        <img src="Fotos/Tronco.jpg" alt="Tronco" class="parte-imagem">
+      </div>
+
+      <div class="parte-corpo" id="membros">
+        <h3>Membros</h3>
+        <ul>
+          <li><strong>Braços:</strong> usamos para pegar coisas.</li>
+          <li><strong>Pernas:</strong> usamos para caminhar e correr.</li>
+        </ul>
+        <img src="Fotos/Membros.jpg" alt="Membros" class="parte-imagem">
+      </div>
+    </section>
+
+    <!-- Funções das Partes do Corpo -->
+    <section id="funcoes-corpo">
+      <h2>Funções das Partes do Corpo</h2>
+      <p>Cada parte do corpo tem uma função especial que nos ajuda a viver bem. É importante conhecer essas funções para entendermos melhor como cuidar do nosso corpo.</p>
+    </section>
+
+    <!-- Importância da Higiene -->
+    <section id="importancia-higiene">
+      <h2>A Importância da Higiene</h2>
+      <p>Cuidar da higiene do nosso corpo é fundamental para nos mantermos saudáveis. Aqui estão algumas razões para mantermos bons hábitos de higiene:</p>
+      <ul>
+        <li>Lavar as mãos antes de comer: evita que germes e bactérias entrem no nosso corpo através dos alimentos.</li>
+        <li>Escovar os dentes: mantém os dentes limpos, evitando cáries e mau hálito.</li>
+        <li>Limpar os olhos, o nariz e as orelhas: previne infecções e mantém essas partes do corpo funcionando bem.</li>
+      </ul>
+      <p>Lembre-se, cuidar do nosso corpo é uma maneira de nos protegermos e garantirmos que estamos sempre prontos para brincar e aprender!</p>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz-cuidados-corpo">
+      <h2>Vamos lembrar para Aprender?</h2>
+
+      <p><strong>Qual parte do corpo humano é utilizada para escutar o que as pessoas falam?</strong></p>
+      <form id="quiz-form">
+        <div class="alternativa">
+          <input type="radio" id="ouvidos" name="resposta" value="ouvidos">
+          <label> Ouvidos
+          </label>
+        </div>
+        <div class="alternativa">
+          <input type="radio" id="nariz" name="resposta" value="nariz">
+          <label for="nariz">
+            Nariz
+          </label>
+        </div>
+        <div class="alternativa">
+          <input type="radio" id="pernas" name="resposta" value="pernas">
+          <label for="pernas">
+            Pernas
+          </label>
+        </div>
+
+        <button type="button" onclick="verificarResposta()">Enviar</button>
+      </form>
+
+      <div id="resultado" style="display:none;">
+        <p id="mensagem-resposta"></p>
+      </div>
+
+      <br><br>
+
+      <p><strong>É importante limpar os dentes porque:</strong></p>
+      <form id="quiz-form2">
+        <div class="alternativa">
+          <input type="radio" id="bichos" name="resposta2" value="bichos">
+          <label for="bichos">
+             Ele tira bichinhos da cárie que fiquem no seu dente.
+          </label>
+        </div>
+        <div class="alternativa">
+          <input type="radio" id="sorriso" name="resposta2" value="sorriso">
+          <label for="sorriso">
+            Ele mantém o sorriso bonito e saudável.
+          </label>
+        </div>
+        <div class="alternativa">
+          <input type="radio" id="mauhalito" name="resposta2" value="mauhalito">
+          <label for="mauhalito">
+          Ele evita o mau hálito.
+          </label>
+        </div>
+        <div class="alternativa">
+          <input type="radio" id="todas" name="resposta2" value="todas">
+          <label for="todas">
+            Todas as respostas.
+          </label>
+        </div>
+
+        <button type="button" onclick="verificarResposta2()">Enviar</button>
+      </form>
+
+      <div id="resultado2" style="display:none;">
+        <p id="mensagem-resposta2"></p>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    function verificarResposta() {
+      const resposta = document.querySelector('input[name="resposta"]:checked');
+      const resultadoDiv = document.getElementById('resultado');
+      const mensagemResposta = document.getElementById('mensagem-resposta');
+
+      if (resposta) {
+        if (resposta.value === 'ouvidos') {
+          mensagemResposta.textContent = "Resposta correta! Usamos os ouvidos para escutar o que as pessoas falam!";
+        } else {
+          mensagemResposta.textContent = "Resposta errada. A resposta correta é: Ouvidos!";
+        }
+        resultadoDiv.style.display = 'block';
+      } else {
+        alert("Por favor, selecione uma alternativa!");
+      }
+    }
+
+    function verificarResposta2() {
+      const resposta = document.querySelector('input[name="resposta2"]:checked');
+      const resultadoDiv = document.getElementById('resultado2');
+      const mensagemResposta = document.getElementById('mensagem-resposta2');
+
+      if (resposta) {
+        if (resposta.value === 'todas') {
+          mensagemResposta.textContent = "Resposta correta! Escovar os dentes ajuda a evitar cáries, manter o sorriso saudável e o hálito fresco!";
+        } else {
+          mensagemResposta.textContent = "Resposta errada. A resposta correta é: Todas as respostas!";
+        }
+        resultadoDiv.style.display = 'block';
+      } else {
+        alert("Por favor, selecione uma alternativa!");
+      }
+    }
+  </script>
+
+</body>
+</html>
